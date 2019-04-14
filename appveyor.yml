@@ -1,0 +1,54 @@
+configuration: Release
+skip_non_tags: true
+image: Visual Studio 2019 Preview
+
+init:
+- ps: >-
+    if ($env:APPVEYOR_REPO_TAG -eq "true")
+    {
+        Update-AppveyorBuild -Version "$($env:APPVEYOR_REPO_TAG_NAME.TrimStart("v")).$env:APPVEYOR_BUILD_NUMBER"
+    }
+    else
+    {
+        Update-AppveyorBuild -Version "dev-$($env:APPVEYOR_REPO_COMMIT.Substring(0, 7)).$env:APPVEYOR_BUILD_NUMBER"
+    }
+
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+
+before_build: 
+- ps: nuget restore src\xmlregions.sln
+- ps: >
+    $file = "$env:APPVEYOR_BUILD_FOLDER\src\xmlregions\source.extension.vsixmanifest"
+
+    [xml]$xml = Get-Content $file
+
+    $ns = New-Object System.Xml.XmlNamespaceManager $xml.NameTable
+
+    $ns.AddNamespace("ns", $xml.DocumentElement.NamespaceURI) | Out-Null
+
+    $attr = $xml.SelectSingleNode("//ns:Identity", $ns).Attributes["Version"]
+
+    $attr.InnerText = $env:APPVEYOR_BUILD_VERSION
+
+    $xml.Save($file) | Out-Null
+
+build:
+  project: src\xmlregions.sln
+  verbosity: minimal
+
+test: off
+
+artifacts:
+- path: src\xmlregions\bin\$(configuration)\xmlregions.vsix
+  name: vsix
+
+deploy:
+- provider: Environment
+  name: XmlRegions
+  on:
+    APPVEYOR_REPO_TAG: true
