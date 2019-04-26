@@ -8,26 +8,26 @@
   },
   "assetFiles": [
     {
-      "pathOnDisk": "named_region.gif",
+      "pathOnDisk": "assets/named_region.gif",
       "targetPath": "assets/named_region.gif"
     },
     {
-      "pathOnDisk": "unnamed_region.gif",
+      "pathOnDisk": "assets/unnamed_region.gif",
       "targetPath": "assets/unnamed_region.gif"
     },
     {
-      "pathOnDisk": "snippet01.png",
+      "pathOnDisk": "assets/snippet01.png",
       "targetPath": "assets/snippet01.png"
     },
     {
-      "pathOnDisk": "snippet02.png",
+      "pathOnDisk": "assets/snippet02.png",
       "targetPath": "assets/snippet02.png"
     }
   ],
-  "overview": "../readme.md",
+  "overview": "readme.md",
   "priceCategory": "free",
   "publisher": "TobiasHein",
-  "private": true,
+  "private": false,
   "qna": true,
   "repo": "https://github.com/tobiashein/XmlRegions"
 }

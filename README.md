@@ -1,7 +1,8 @@
 # XML Regions
 
-![AppVeyor](https://img.shields.io/appveyor/ci/tobiashein/XmlRegions.svg)
-![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/TobiasHein.XmlRegions.svg)
+[![AppVeyor](https://img.shields.io/appveyor/ci/tobiashein/XmlRegions.png?logo=appveyor)](https://ci.appveyor.com/project/tobiashein/xmlregions)
+[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/TobiasHein.XmlRegions.png?logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=TobiasHein.XmlRegions)
+[![Donate](https://img.shields.io/badge/donate-paypal-brightgreen.png?logo=paypal)](https://paypal.me/niehsaibot)
 
 A Visual Studio extension that adds support for regions in XML files.
 
