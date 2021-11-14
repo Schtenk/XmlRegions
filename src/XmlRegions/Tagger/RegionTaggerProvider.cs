@@ -18,7 +18,7 @@ namespace XmlRegions
         /// Creates a tag provider for the specified buffer.
         /// </summary>
         /// <typeparam name="T">The type of the tag.</typeparam>
-        /// <param name="buffer">The <see cref="Microsoft.VisualStudio.Text.ITextBuffer" />.</param>
+        /// <param name="buffer">The <see cref="ITextBuffer" />.</param>
         /// <returns></returns>
         public ITagger<T> CreateTagger<T>(ITextBuffer buffer)
             where T : ITag
