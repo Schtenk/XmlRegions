@@ -45,6 +45,16 @@ A code snippet to quickly insert new regions is provided.
 
 ![Snippet example 2](assets/snippet02.png)
 
+## Release Notes
+
+### v1.1.0
+
+- Add support for Visual Studio 2022
+
+### v1.0.0
+
+- Initial release
+
 ## License
 
 [MIT](https://github.com/tobiashein/XmlRegions/blob/master/LICENSE)
