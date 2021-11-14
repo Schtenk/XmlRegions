@@ -11,7 +11,7 @@ namespace XmlRegions
         public const string Name = "XML Regions";
         public const string Description = @"Adds support for region comments in XML files.";
         public const string Language = "en-US";
-        public const string Version = "1.0";
+        public const string Version = "1.1.0";
         public const string Author = "Tobias Hein";
         public const string Tags = "XML, regions";
     }
