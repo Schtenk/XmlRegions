@@ -1,10 +1,8 @@
-﻿using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Text;
+﻿using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Tagging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Threading;
 
 namespace XmlRegions
 {
@@ -21,9 +19,9 @@ namespace XmlRegions
             _buffer = buffer;
             _snapshot = buffer.CurrentSnapshot;
 
-            _buffer.Changed += OnBufferChanged;
+            _buffer.ChangedLowPriority += OnChangedLowPriority;
 
-            ThreadHelper.Generic.BeginInvoke(DispatcherPriority.ApplicationIdle, Parse);
+            Parse();
         }
 
         #endregion Constructors
@@ -187,12 +185,12 @@ namespace XmlRegions
         /// </summary>
         /// <param name="sender">The sender.</param>
         /// <param name="e">The <see cref="TextContentChangedEventArgs"/> instance containing the event data.</param>
-        private void OnBufferChanged(object sender, TextContentChangedEventArgs e)
+        private void OnChangedLowPriority(object sender, TextContentChangedEventArgs e)
         {
             if (e.After != _buffer.CurrentSnapshot)
                 return;
 
-            ThreadHelper.Generic.BeginInvoke(DispatcherPriority.ApplicationIdle, Parse);
+            Parse();
         }
 
         /// <summary>
