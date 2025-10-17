@@ -13,7 +13,7 @@ See the [change log](https://github.com/tobiashein/XmlRegions/blob/master/CHANGE
 
 - Region outlining
 - Display region name in collapsed mode
-- Snippet for inserting regions in XML
+- Snippet for inserting regions (XML only)
 
 ### Outlining
 
