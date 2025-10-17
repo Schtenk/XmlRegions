@@ -8,6 +8,7 @@ namespace XmlRegions
     [Export(typeof(ITaggerProvider))]
     [TagType(typeof(IOutliningRegionTag))]
     [ContentType("XML")]
+    [ContentType("AXAML")]
     internal sealed class RegionTaggerProvider : ITaggerProvider
     {
         #region Methods

@@ -8,6 +8,7 @@ namespace XmlRegions
 {
     [Export(typeof(IClassifierProvider))]
     [ContentType("XML")]
+    [ContentType("AXAML")]
     [Order(After = "Default")]
     [TextViewRole(PredefinedTextViewRoles.Document)]
     public class RegionClassifierProvider : IClassifierProvider

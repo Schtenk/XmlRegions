@@ -4,7 +4,7 @@
 [![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/TobiasHein.XmlRegions.png?logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=TobiasHein.XmlRegions)
 [![Donate](https://img.shields.io/badge/donate-paypal-brightgreen.png?logo=paypal)](https://paypal.me/niehsaibot)
 
-A Visual Studio extension that adds support for regions in XML files.
+A Visual Studio extension that adds support for regions in XML and AXAML (Avalonia XAML) files.
 
 You can download the extension from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TobiasHein.XmlRegions) or get the latest [CI build](https://ci.appveyor.com/project/tobiashein/xmlregions/build/artifacts). 
 See the [change log](https://github.com/tobiashein/XmlRegions/blob/master/CHANGELOG.md) for the latest changes.
@@ -13,7 +13,7 @@ See the [change log](https://github.com/tobiashein/XmlRegions/blob/master/CHANGE
 
 - Region outlining
 - Display region name in collapsed mode
-- Snippet for inserting regions
+- Snippet for inserting regions in XML
 
 ### Outlining
 
@@ -46,6 +46,10 @@ A code snippet to quickly insert new regions is provided.
 ![Snippet example 2](assets/snippet02.png)
 
 ## Release Notes
+
+### v1.1.1
+
+- Add support for AXAML (Avalonia XAML)
 
 ### v1.1.0
 
