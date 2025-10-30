@@ -2,7 +2,7 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
         <Identity Id="XmlRegions.bc2b6443-6808-4c2c-935c-2a3ede9a8efd" Version="1.1.1" Language="en-US" Publisher="Tobias Hein" />
-        <DisplayName>XML/AXAML Regions</DisplayName>
+        <DisplayName>XML Regions</DisplayName>
         <Description xml:space="preserve">Adds support for region comments in XML and AXAML(Avalonia XAML) files .</Description>
         <MoreInfo>https://github.com/tobiashein/XmlRegions</MoreInfo>
         <License>Resources\LICENSE</License>
