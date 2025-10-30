@@ -9,7 +9,7 @@ namespace XmlRegions
     internal sealed partial class Vsix
     {
         public const string Id = "XmlRegions.bc2b6443-6808-4c2c-935c-2a3ede9a8efd";
-        public const string Name = "XML/AXAML Regions";
+        public const string Name = "XML Regions";
         public const string Description = @"Adds support for region comments in XML and AXAML(Avalonia XAML) files .";
         public const string Language = "en-US";
         public const string Version = "1.1.1";
